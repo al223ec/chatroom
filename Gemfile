@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'redis', '~> 3.2'
 ## scss
 gem 'bourbon', '4.2.7'
 gem 'neat'

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+
+
+  resources :chat_rooms, only: [:new, :create, :show, :index]
+  root 'chat_rooms#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
