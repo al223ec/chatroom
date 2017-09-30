@@ -1,25 +1,33 @@
 
 jQuery(document).on('turbolinks:load', function(){
+  var messages, messages_to_bottom;
+
   messages = $('#messages');
   if (messages.length > 0){
+    messagesToBottom = function(){
+      messages.scrollTop(messages.prop("scrollHeight"))
+    }
+    messagesToBottom();
+
     App.GlobalChat = App.Cable.subscriptions.create({
-      channel: "ChatRoomsChannel",
-      chatRoomId: messages.data('chat-room-id'),
-      connected: function(){
-        // # Called when the subscription is ready for use on the server
-      },
-      disconnected: function(){
-        // # Called when the subscription has been terminated by the server
-      },
-      received: function(data){
-
-      },
-      sendMessage: function(message, chatRoomId){
-        console.log(this)
-        this.perform('sendMessage', { message: message, chat_room_id: chatRoomId }) //ruby convention
-      }
+        channel: "ChatRoomsChannel",
+        chat_room_id: messages.data('chat-room-id') // ruby convention
+      },{
+        connected: function() {},
+        disconnected: function() {},
+        received: function(data) {
+          console.log("received message from cable")
+          messages.append(data['message']);
+          messages_to_bottom();
+        },
+        sendMessage: function(message, chatRoomId) {
+          // ruby convention
+          return this.perform('send_message', {
+            message: message,
+            chat_room_id: chatRoomId
+          });
+        }
     });
-
 
     // TODO:: Move this
     $('#new_message').submit(function(e){
