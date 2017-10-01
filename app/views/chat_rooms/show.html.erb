@@ -1,15 +1,41 @@
-<h1><%= @chat_room.title %></h1>
+<% content_for :aside_left do %>
+<ul class="ascii">
+  <li>Available chat rooms:
+    <ul>
+      <%= render @chat_rooms %>
+    </ul>
+  </li>
+</ul>
+<div><%= link_to 'New chat room', new_chat_room_path %></div>
+<% end %>
+
+
+<% content_for :main do %>
 
 <div class="messages" id="messages" data-chat-room-id="<%= @chat_room.id %>">
+  <h2><%= @chat_room.title %></h2>
+
+  <span class="corner tl"></span>
+  <span class="corner tr"></span>
   <%= render @chat_room.messages %>
 </div>
 
 
-<%= form_for @message, url: '#' do |f| %>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
+<div class="new-message-form-wrapper">
 
-  <small>From 2 to 1000 characters</small>
+  <span class="corner tl"></span>
+  <span class="corner tr"></span>
+  <span class="corner bl"></span>
+  <span class="corner br"></span>
 
-  <%= f.submit "Post" %>
+
+  <%= form_for @message, url: '#' do |f| %>
+    <%= f.label :body, 'New message' %>
+    <%= f.text_area :body %>
+
+    <small>From 2 to 1000 characters</small>
+
+    <%= f.submit "Post" %>
+  <% end %>
+</div>
 <% end %>

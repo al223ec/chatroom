@@ -1,21 +1,14 @@
 
-
-  <article class="main">
-    <span class="corner tl"></span>
-    <span class="corner bl"></span>
-  </article>
-
-
-  <aside class="aside aside-left">
-    <ul class="ascii">
-      <li>Available chat rooms:
-        <ul>
-          <%= render @chat_rooms %>
-        </ul>
-      </li>
-    </ul>
-    <div><%= link_to 'New chat room', new_chat_room_path %></div>
-  </aside>
+<% content_for :aside_left do %>
+  <ul class="ascii">
+    <li>Available chat rooms:
+      <ul>
+        <%= render @chat_rooms %>
+      </ul>
+    </li>
+  </ul>
+  <div><%= link_to 'New chat room', new_chat_room_path %></div>
+<% end %>
 
 
 

@@ -18,25 +18,36 @@
 
       <h1>MEDIA CHAT</h1>
     </header>
-  <%= yield %>
+
+    <aside class="aside aside-left">
+      <%= yield :aside_left %>
+    </aside>
 
 
-  <footer class="footer">
-    <span class="corner tl"></span>
-    <span class="corner tr"></span>
-    <span class="corner bl"></span>
-    <span class="corner br"></span>
+    <article class="main">
+      <span class="corner tl"></span>
+      <span class="corner bl"></span>
 
-    <ul>
-      <li>Anton Ledström</li>
-      <li><%= mail_to "antonledstrom@gmail.com" %></li>
-      <li>070 895 55 86</li>
-      <li>Klubbacken 34</li>
-      <li>Hägersten</li>
-      <li>129 39</li>
-    </ul>
-  </footer>
+      <%= yield :main %>
+    </article>
 
-</div>
+
+    <footer class="footer">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
+
+      <ul>
+        <li>Anton Ledström</li>
+        <li><%= mail_to "antonledstrom@gmail.com" %></li>
+        <li>070 895 55 86</li>
+        <li>Klubbacken 34</li>
+        <li>Hägersten</li>
+        <li>129 39</li>
+      </ul>
+    </footer>
+
+  </div>
 </body>
 </html>

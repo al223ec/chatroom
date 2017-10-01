@@ -1,0 +1,11 @@
+div.message{
+  border-top: 1px dashed #000;
+  li{
+    &.timestamp{
+      text-align: right;
+    }
+    span.small{
+      font-size: 0.8em;
+    }
+  }
+}
