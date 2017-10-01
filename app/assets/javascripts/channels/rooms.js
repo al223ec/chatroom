@@ -16,7 +16,6 @@ jQuery(document).on('turbolinks:load', function(){
         connected: function() {},
         disconnected: function() {},
         received: function(data) {
-          console.log("received message from cable")
           messages.append(data['message']);
           messages_to_bottom();
         },

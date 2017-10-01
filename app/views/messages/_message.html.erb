@@ -1,3 +1,7 @@
-<%= message.user.display_name %>
-<%= message.timestamp %>
-<%= message.body %>
+<div class="message">
+  <ul class="assci">
+    <li><%= message.timestamp %></li>
+    <li><%= message.user.display_name %> </li>
+    <li><%= message.body %></li>
+  </ul>
+</div>

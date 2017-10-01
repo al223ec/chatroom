@@ -1,8 +1,9 @@
 <h1><%= @chat_room.title %></h1>
 
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+<div class="messages" id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <%= render @chat_room.messages %>
 </div>
+
 
 <%= form_for @message, url: '#' do |f| %>
   <%= f.label :body %>

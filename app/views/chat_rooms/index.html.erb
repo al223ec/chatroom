@@ -1,7 +1,52 @@
-<h1>Chat rooms</h1>
 
-<div><%= link_to 'New chat room', new_chat_room_path %></div>
 
-<ul>
-  <%= render @chat_rooms %>
-</ul>
+  <article class="main">
+    <span class="corner tl"></span>
+    <span class="corner bl"></span>
+  </article>
+
+
+  <aside class="aside aside-left">
+    <ul class="ascii">
+      <li>Available chat rooms:
+        <ul>
+          <%= render @chat_rooms %>
+        </ul>
+      </li>
+    </ul>
+    <div><%= link_to 'New chat room', new_chat_room_path %></div>
+  </aside>
+
+
+
+<!-- <div class="ascii-table">
+    <table>
+        <tr>
+            <td>Jill</td><td>Smith</td><td>50</td>
+        </tr>
+    </table>
+</div>
+<div class="ascii-table">
+    <table>
+        <tr>
+            <td>Jill</td><td>Smith</td><td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td><td>Jackson
+              asdasd sad asd sad asd asd dasdölkk kk ok ok k kk k k k kpasl l
+            </td><td>94</td>
+        </tr>
+    </table>
+</div> -->
+<!-- <div class="ascii-chat-room">
+  <div class="ascii-chat-room-wrapper">
+    <div class="ascii-chat-room-message-wrapper">
+      <div class="ascii-chat-room-message-header">
+        Jill @ 11:24:00 01/10/17
+      </div>
+      <div class="ascii-chat-room-message">
+        Inga nazister på våra gator
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -7,6 +7,6 @@ class Message < ActiveRecord::Base
   after_create_commit { MessageBroadcastJob.perform_later(self) } ## broadcast message
 
   def timestamp
-    created_at.strftime('%H:%M:%S %d %B %Y')
+    created_at.strftime('%H:%M:%S %d/%m/%y')
   end
 end

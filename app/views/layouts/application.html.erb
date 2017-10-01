@@ -5,12 +5,38 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-  
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="wrapper">
+    <header class="header">
+      <span class="corner tl"></span>
+      <span class="corner tr"></span>
+      <span class="corner bl"></span>
+      <span class="corner br"></span>
 
-<%= yield %>
+      <h1>MEDIA CHAT</h1>
+    </header>
+  <%= yield %>
 
+
+  <footer class="footer">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+
+    <ul>
+      <li>Anton Ledström</li>
+      <li><%= mail_to "antonledstrom@gmail.com" %></li>
+      <li>070 895 55 86</li>
+      <li>Klubbacken 34</li>
+      <li>Hägersten</li>
+      <li>129 39</li>
+    </ul>
+  </footer>
+
+</div>
 </body>
 </html>

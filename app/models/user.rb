@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   has_many :messages
 
   def display_name
-    email
+    email.split('@')[0]
   end
 end
