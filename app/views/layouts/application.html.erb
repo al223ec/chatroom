@@ -16,11 +16,27 @@
       <span class="corner bl"></span>
       <span class="corner br"></span>
 
-      <h1>MEDIA CHAT</h1>
+      <!-- <h1>MEDIA CHAT</h1> -->
+<pre>
+
+  ___  ___ ___________ _____  ___  _____  _   _   ___ _____
+  |  \/  ||  ___|  _  \_   _|/ _ \/  __ \| | | | / _ \_   _|
+  | .  . || |__ | | | | | | / /_\ \ /  \/| |_| |/ /_\ \| |
+  | |\/| ||  __|| | | | | | |  _  | |    |  _  ||  _  || |
+  | |  | || |___| |/ / _| |_| | | | \__/\| | | || | | || |
+  \_|  |_/\____/|___/  \___/\_| |_/\____/\_| |_/\_| |_/\_/
+
+</pre>
+
+
     </header>
 
     <aside class="aside aside-left">
       <%= yield :aside_left %>
+
+      <% if current_user %>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+      <% end %>
     </aside>
 
 

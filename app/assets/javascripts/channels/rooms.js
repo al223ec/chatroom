@@ -1,13 +1,17 @@
 
 jQuery(document).on('turbolinks:load', function(){
-  var messages, messages_to_bottom;
+  var messages, scrollToBottom;
+  scrollToBottom = function(){
+    $('html, body').animate({
+      scrollTop: $(document).height()-$(window).height()},
+      400,
+      "linear"
+    );
+  }
 
   messages = $('#messages');
   if (messages.length > 0){
-    messagesToBottom = function(){
-      messages.scrollTop(messages.prop("scrollHeight"))
-    }
-    messagesToBottom();
+    scrollToBottom();
 
     App.GlobalChat = App.Cable.subscriptions.create({
         channel: "ChatRoomsChannel",
@@ -17,7 +21,7 @@ jQuery(document).on('turbolinks:load', function(){
         disconnected: function() {},
         received: function(data) {
           messages.append(data['message']);
-          messages_to_bottom();
+          scrollToBottom();
         },
         sendMessage: function(message, chatRoomId) {
           // ruby convention

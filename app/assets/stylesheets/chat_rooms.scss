@@ -19,9 +19,14 @@ div.new-message-form-wrapper{
     width: 100%;
   }
   textarea{
-    width: 99%; 
+    width: 99%;
   }
   input[type=submit]{
     margin-top: 10px;
   }
+}
+
+div.exit-wrapper{
+  padding: 10px;
+  text-align: right;
 }

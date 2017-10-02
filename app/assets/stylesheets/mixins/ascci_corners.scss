@@ -1,5 +1,6 @@
 @mixin ascci-corners {
   position: relative;
+  
   span{
     &.corner{
       background-image: url('corner.png');

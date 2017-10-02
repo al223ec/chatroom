@@ -14,9 +14,10 @@
 
 <div class="messages" id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <h2><%= @chat_room.title %></h2>
-
   <span class="corner tl"></span>
   <span class="corner tr"></span>
+
+  
   <%= render @chat_room.messages %>
 </div>
 
@@ -37,5 +38,9 @@
 
     <%= f.submit "Post" %>
   <% end %>
+</div>
+
+<div class="exit-wrapper">
+<%= link_to "Exit room", chat_rooms_path %>
 </div>
 <% end %>

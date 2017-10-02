@@ -7798,3 +7798,1581 @@ Processing by ChatRoomsController#index as HTML
 Completed 200 OK in 56ms (Views: 50.2ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2017-10-01 14:01:40 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (4.3ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 388ms (Views: 378.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-10-01 14:01:56 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.4ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-10-01 14:02:54 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.1ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-10-01 14:03:10 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.1ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/chat_rooms/2" for ::1 at 2017-10-01 14:04:08 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [2 times] (5.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 56ms (Views: 45.3ms | ActiveRecord: 1.6ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:04:09 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:04:09 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:04:09 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/" for ::1 at 2017-10-01 14:05:07 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.0ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 61ms (Views: 51.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-10-01 14:05:36 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.8ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 46ms (Views: 40.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:05:38 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [9 times] (19.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 82ms (Views: 66.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 14:05:39 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:05:39 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"scalable. It's a full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework. You have access to your full domain model written with Active Record or your ORM of choice.", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "scalable. It's a full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework. You have access to your full domain model written with Active Record or your ORM of choice."], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 12:05:54 UTC], ["updated_at", 2017-10-01 12:05:54 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 6ef7d237-cf4e-4585-9294-7690c24e00fa) to Async(default) with arguments: #<GlobalID:0x007ff33a059620 @uri=#<URI::GID gid://media-chat/Message/12>>
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [6ef7d237-cf4e-4585-9294-7690c24e00fa] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff33be15df8 @uri=#<URI::GID gid://media-chat/Message/12>>
+[ActiveJob] [MessageBroadcastJob] [6ef7d237-cf4e-4585-9294-7690c24e00fa]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [6ef7d237-cf4e-4585-9294-7690c24e00fa]   Rendered messages/_message.html.erb (4.0ms)
+[ActiveJob] [MessageBroadcastJob] [6ef7d237-cf4e-4585-9294-7690c24e00fa] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:05:54 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>scalable. It&#39;s a full-stack offering that provides both a client-side JavaScript framework and a server-side Ruby framework. You have access to your full domain model written with Active Record or your ORM of choice.</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [6ef7d237-cf4e-4585-9294-7690c24e00fa] Performed MessageBroadcastJob from Async(default) in 30.33ms
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:05:54 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>scalable. It&#39;s a full-stack offering that provides both a client-side JavaScript... (via streamed from chat_rooms_1_channel)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:05:54 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>scalable. It&#39;s a full-stack offering that provides both a client-side JavaScript... (via streamed from chat_rooms_1_channel)
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:06:14 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/2" for ::1 at 2017-10-01 14:06:28 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [2 times] (4.7ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 61ms (Views: 51.1ms | ActiveRecord: 1.4ms)
+
+
+[ActionCable] [erik@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:06:28 +0200
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:06:28 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:06:28 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:09:56 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (16.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 72ms (Views: 62.5ms | ActiveRecord: 1.9ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:09:56 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:09:56 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:09:56 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:11:30 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (17.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 121ms (Views: 64.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 14:11:30 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:11:30 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:11:37 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:11:37 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:14:50 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (18.6ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 79ms (Views: 66.9ms | ActiveRecord: 2.0ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:14:51 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:14:51 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:14:51 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:15:37 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (3.8ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (36.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_url' for #<#<Class:0x007ff3406e7720>:0x007ff33eb0d900>):
+    14: 
+    15: <div class="messages" id="messages" data-chat-room-id="<%= @chat_room.id %>">
+    16:   <h2><%= @chat_room.title %></h2>
+    17:   <%= link_to home_url, "Exit room" %>
+    18: 
+    19:   <span class="corner tl"></span>
+    20:   <span class="corner tr"></span>
+  
+app/views/chat_rooms/show.html.erb:17:in `block in _app_views_chat_rooms_show_html_erb__2708772213878784393_70341352781780'
+app/views/chat_rooms/show.html.erb:13:in `_app_views_chat_rooms_show_html_erb__2708772213878784393_70341352781780'
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.2ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (134.1ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_uptrail__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2396687839694232786_70341315653920 at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (123.5ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (274.8ms)
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:15:38 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:16:09 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (17.2ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 69ms (Views: 59.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 14:16:09 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:09 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:16:22 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (18.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 70ms (Views: 60.4ms | ActiveRecord: 1.7ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:22 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:16:23 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:23 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:16:33 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (17.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 64ms (Views: 55.3ms | ActiveRecord: 1.5ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:33 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:16:33 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:33 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms" for ::1 at 2017-10-01 14:16:43 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.6ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 65ms (Views: 54.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:16:45 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.5ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (30.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 122ms (Views: 106.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/chat_rooms" for ::1 at 2017-10-01 14:16:46 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (2.2ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 60ms (Views: 53.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/chat_rooms/2" for ::1 at 2017-10-01 14:16:47 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [2 times] (6.2ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 76ms (Views: 56.5ms | ActiveRecord: 2.5ms)
+
+
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms" for ::1 at 2017-10-01 14:16:47 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.8ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 64ms (Views: 56.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/chat_rooms" for ::1 at 2017-10-01 14:16:53 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (2.0ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 48ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:53 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:16:54 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (19.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (35.8ms)
+Completed 200 OK in 105ms (Views: 93.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 14:16:54 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:16:54 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:17:02 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (20.3ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 72ms (Views: 61.1ms | ActiveRecord: 1.8ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:17:02 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:17:02 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:17:02 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:17:09 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (26.9ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 97ms (Views: 83.6ms | ActiveRecord: 2.1ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:17:09 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:17:10 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:17:10 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:18:04 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (14.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 302ms (Views: 291.4ms | ActiveRecord: 1.6ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:18:04 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:18:04 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:18:04 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms" for ::1 at 2017-10-01 14:18:11 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.9ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 55ms (Views: 47.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:18:12 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [10 times] (37.9ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 114ms (Views: 97.1ms | ActiveRecord: 2.5ms)
+
+
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"On more time \n", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "On more time \n"], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 12:18:35 UTC], ["updated_at", 2017-10-01 12:18:35 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: b0ba3464-fd76-4fea-b83a-052f6fe63b0a) to Async(default) with arguments: #<GlobalID:0x007ff33a738f90 @uri=#<URI::GID gid://media-chat/Message/13>>
+[ActiveJob] [MessageBroadcastJob] [b0ba3464-fd76-4fea-b83a-052f6fe63b0a] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff339ee19c8 @uri=#<URI::GID gid://media-chat/Message/13>>
+[ActiveJob] [MessageBroadcastJob] [b0ba3464-fd76-4fea-b83a-052f6fe63b0a]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [b0ba3464-fd76-4fea-b83a-052f6fe63b0a]   Rendered messages/_message.html.erb (3.5ms)
+[ActiveJob] [MessageBroadcastJob] [b0ba3464-fd76-4fea-b83a-052f6fe63b0a] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:18:35 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>On more time \n</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [b0ba3464-fd76-4fea-b83a-052f6fe63b0a] Performed MessageBroadcastJob from Async(default) in 33.52ms
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:18:35 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>On more time \n</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"} (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:19:28 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [11 times] (24.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 94ms (Views: 80.8ms | ActiveRecord: 1.9ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:19:28 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:19:28 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:19:28 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"rest of your Rails application, while still being performant and scalable. ", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "rest of your Rails application, while still being performant and scalable. "], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 12:19:37 UTC], ["updated_at", 2017-10-01 12:19:37 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 65256e70-222e-4bd6-bd80-fa2e62073159) to Async(default) with arguments: #<GlobalID:0x007ff339d2cc68 @uri=#<URI::GID gid://media-chat/Message/14>>
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [65256e70-222e-4bd6-bd80-fa2e62073159] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff3416b1f98 @uri=#<URI::GID gid://media-chat/Message/14>>
+[ActiveJob] [MessageBroadcastJob] [65256e70-222e-4bd6-bd80-fa2e62073159]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [65256e70-222e-4bd6-bd80-fa2e62073159]   Rendered messages/_message.html.erb (4.8ms)
+[ActiveJob] [MessageBroadcastJob] [65256e70-222e-4bd6-bd80-fa2e62073159] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:19:37 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>rest of your Rails application, while still being performant and scalable. </li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [65256e70-222e-4bd6-bd80-fa2e62073159] Performed MessageBroadcastJob from Async(default) in 31.99ms
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:19:37 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>rest of your Rails application, while still being performant and scalable. </li>\n  ... (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:19:49 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [12 times] (23.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 96ms (Views: 81.5ms | ActiveRecord: 1.9ms)
+
+
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"tion Cable seamlessly integrates WebSockets with the rest of your Rails application. I", "chat_room_id"=>1})
+[ActionCable] [erik@chatrooms.com]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [erik@chatrooms.com]   [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "tion Cable seamlessly integrates WebSockets with the rest of your Rails application. I"], ["user_id", 2], ["chat_room_id", 1], ["created_at", 2017-10-01 12:19:56 UTC], ["updated_at", 2017-10-01 12:19:56 UTC]]
+[ActionCable] [erik@chatrooms.com]   [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: e5bc2848-4996-432e-88cd-2fc49c6e5f45) to Async(default) with arguments: #<GlobalID:0x007ff33ecbeba0 @uri=#<URI::GID gid://media-chat/Message/15>>
+[ActiveJob] [MessageBroadcastJob] [e5bc2848-4996-432e-88cd-2fc49c6e5f45] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff33d5d5650 @uri=#<URI::GID gid://media-chat/Message/15>>
+[ActiveJob] [MessageBroadcastJob] [e5bc2848-4996-432e-88cd-2fc49c6e5f45]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [e5bc2848-4996-432e-88cd-2fc49c6e5f45]   Rendered messages/_message.html.erb (2.9ms)
+[ActiveJob] [MessageBroadcastJob] [e5bc2848-4996-432e-88cd-2fc49c6e5f45] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:19:56 01/10/17</span></li>\n    <li><span class=\"small\"> erik:</span>\n      <ul>\n        <li>tion Cable seamlessly integrates WebSockets with the rest of your Rails application. I</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [e5bc2848-4996-432e-88cd-2fc49c6e5f45] Performed MessageBroadcastJob from Async(default) in 28.9ms
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:19:56 01/10/17</span></li>\n    <li><span class=\"small\"> erik:</span>\n      <ul>\n        <li>tion Cable seamlessly integrates WebSockets with the rest of your Rails application. ... (via streamed from chat_rooms_1_channel)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:19:56 01/10/17</span></li>\n    <li><span class=\"small\"> erik:</span>\n      <ul>\n        <li>tion Cable seamlessly integrates WebSockets with the rest of your Rails application. ... (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:20:50 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [13 times] (24.5ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 201ms (Views: 190.9ms | ActiveRecord: 1.8ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:20:50 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:20:51 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:20:51 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:20:54 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [13 times] (27.5ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 90ms (Views: 80.8ms | ActiveRecord: 1.9ms)
+
+
+[ActionCable] [erik@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:20:54 +0200
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:20:55 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:20:55 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"By using Homebrew, you greatly reduce the cost of setting up and configuring the development environment on Mac OS X.", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (2.8ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "By using Homebrew, you greatly reduce the cost of setting up and configuring the development environment on Mac OS X."], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 12:21:09 UTC], ["updated_at", 2017-10-01 12:21:09 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [9fb681c3-e1a5-4a45-b929-6c8534ec5f73] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff338cdd5b0 @uri=#<URI::GID gid://media-chat/Message/16>>
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 9fb681c3-e1a5-4a45-b929-6c8534ec5f73) to Async(default) with arguments: #<GlobalID:0x007ff338408e30 @uri=#<URI::GID gid://media-chat/Message/16>>
+[ActiveJob] [MessageBroadcastJob] [9fb681c3-e1a5-4a45-b929-6c8534ec5f73]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [9fb681c3-e1a5-4a45-b929-6c8534ec5f73]   Rendered messages/_message.html.erb (5.1ms)
+[ActiveJob] [MessageBroadcastJob] [9fb681c3-e1a5-4a45-b929-6c8534ec5f73] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:21:09 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>By using Homebrew, you greatly reduce the cost of setting up and configuring the development environment on Mac OS X.</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [9fb681c3-e1a5-4a45-b929-6c8534ec5f73] Performed MessageBroadcastJob from Async(default) in 36.07ms
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:21:09 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>By using Homebrew, you greatly reduce the cost of setting up and configuring the dev... (via streamed from chat_rooms_1_channel)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:21:09 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>By using Homebrew, you greatly reduce the cost of setting up and configuring the dev... (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:21:21 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [14 times] (35.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (52.2ms)
+Completed 200 OK in 287ms (Views: 274.3ms | ActiveRecord: 2.3ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:21:21 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 14:21:22 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:21:22 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 14:21:25 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/" for ::1 at 2017-10-01 14:21:47 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.9ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 69ms (Views: 61.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 14:21:49 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.6ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (10.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.5ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [14 times] (35.2ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (52.8ms)
+Completed 200 OK in 132ms (Views: 100.8ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 14:21:49 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 14:21:49 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"The directives begin with a percent (%) character. Any text not listed as a directive will be passed through to the output string.", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "The directives begin with a percent (%) character. Any text not listed as a directive will be passed through to the output string."], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 12:21:57 UTC], ["updated_at", 2017-10-01 12:21:57 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 782597fb-7a14-4fac-889e-0363e097974d) to Async(default) with arguments: #<GlobalID:0x007ff340417d10 @uri=#<URI::GID gid://media-chat/Message/17>>
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [782597fb-7a14-4fac-889e-0363e097974d] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff341222a40 @uri=#<URI::GID gid://media-chat/Message/17>>
+[ActiveJob] [MessageBroadcastJob] [782597fb-7a14-4fac-889e-0363e097974d]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [782597fb-7a14-4fac-889e-0363e097974d]   Rendered messages/_message.html.erb (3.0ms)
+[ActiveJob] [MessageBroadcastJob] [782597fb-7a14-4fac-889e-0363e097974d] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:21:57 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>The directives begin with a percent (%) character. Any text not listed as a directive will be passed through to the output string.</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [782597fb-7a14-4fac-889e-0363e097974d] Performed MessageBroadcastJob from Async(default) in 25.95ms
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:21:57 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>The directives begin with a percent (%) character. Any text not listed as a directiv... (via streamed from chat_rooms_1_channel)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">12:21:57 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>The directives begin with a percent (%) character. Any text not listed as a directiv... (via streamed from chat_rooms_1_channel)
+[ActionCable] [erik@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:14:38 +0200
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:14:38 +0200
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 19:14:39 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:14:39 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 19:14:39 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:14:39 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 19:16:30 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.5ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [15 times] (31.7ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 234ms (Views: 223.6ms | ActiveRecord: 2.3ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:16:30 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 19:17:23 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [15 times] (54.6ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 230ms (Views: 220.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 19:17:24 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:17:24 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 19:17:29 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [15 times] (25.4ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 83ms (Views: 74.0ms | ActiveRecord: 1.6ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:17:29 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 19:17:30 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:17:30 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"Message", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "Message"], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 17:17:42 UTC], ["updated_at", 2017-10-01 17:17:42 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [2f1e5ce9-1cb6-4563-ad83-499b6e241bff] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff33a264de8 @uri=#<URI::GID gid://media-chat/Message/18>>
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 2f1e5ce9-1cb6-4563-ad83-499b6e241bff) to Async(default) with arguments: #<GlobalID:0x007ff33a1847e8 @uri=#<URI::GID gid://media-chat/Message/18>>
+[ActiveJob] [MessageBroadcastJob] [2f1e5ce9-1cb6-4563-ad83-499b6e241bff]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [2f1e5ce9-1cb6-4563-ad83-499b6e241bff]   Rendered messages/_message.html.erb (5.1ms)
+[ActiveJob] [MessageBroadcastJob] [2f1e5ce9-1cb6-4563-ad83-499b6e241bff] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">17:17:42 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>Message</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [2f1e5ce9-1cb6-4563-ad83-499b6e241bff] Performed MessageBroadcastJob from Async(default) in 45.8ms
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">17:17:42 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>Message</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"} (via streamed from chat_rooms_1_channel)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">17:17:42 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>Message</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"} (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 19:17:53 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [16 times] (30.9ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 91ms (Views: 78.5ms | ActiveRecord: 2.1ms)
+
+
+[ActionCable] [erik@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:17:53 +0200
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 19:17:53 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:17:53 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel#send_message({"message"=>"Lionhart", "chat_room_id"=>1})
+[ActionCable] [anton@chatrooms.com]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActionCable] [anton@chatrooms.com]   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("body", "user_id", "chat_room_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["body", "Lionhart"], ["user_id", 1], ["chat_room_id", 1], ["created_at", 2017-10-01 17:18:03 UTC], ["updated_at", 2017-10-01 17:18:03 UTC]]
+[ActionCable] [anton@chatrooms.com]   [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+[ActionCable] [anton@chatrooms.com] [ActiveJob] Enqueued MessageBroadcastJob (Job ID: 4d6ce79c-62d2-440e-b9d8-50c773c26a13) to Async(default) with arguments: #<GlobalID:0x007ff33e82a918 @uri=#<URI::GID gid://media-chat/Message/19>>
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [4d6ce79c-62d2-440e-b9d8-50c773c26a13] Performing MessageBroadcastJob from Async(default) with arguments: #<GlobalID:0x007ff33baec2f8 @uri=#<URI::GID gid://media-chat/Message/19>>
+[ActiveJob] [MessageBroadcastJob] [4d6ce79c-62d2-440e-b9d8-50c773c26a13]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [MessageBroadcastJob] [4d6ce79c-62d2-440e-b9d8-50c773c26a13]   Rendered messages/_message.html.erb (3.4ms)
+[ActiveJob] [MessageBroadcastJob] [4d6ce79c-62d2-440e-b9d8-50c773c26a13] [ActionCable] Broadcasting to chat_rooms_1_channel: {:message=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">17:18:03 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>Lionhart</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"}
+[ActiveJob] [MessageBroadcastJob] [4d6ce79c-62d2-440e-b9d8-50c773c26a13] Performed MessageBroadcastJob from Async(default) in 28.65ms
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">17:18:03 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>Lionhart</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"} (via streamed from chat_rooms_1_channel)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel transmitting {"message"=>"<div class=\"message\">\n  <ul class=\"ascii\">\n    <li class=\"timestamp\"><span class=\"small\">17:18:03 01/10/17</span></li>\n    <li><span class=\"small\"> anton:</span>\n      <ul>\n        <li>Lionhart</li>\n      </ul>\n    </li>\n  </ul>\n</div>\n"} (via streamed from chat_rooms_1_channel)
+Started GET "/chat_rooms/2" for ::1 at 2017-10-01 19:21:40 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [2 times] (5.8ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 56ms (Views: 45.5ms | ActiveRecord: 1.3ms)
+
+
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 19:21:44 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [17 times] (30.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 101ms (Views: 86.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/chat_rooms/1" for ::1 at 2017-10-01 19:29:52 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 1[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [17 times] (25.9ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 231ms (Views: 219.0ms | ActiveRecord: 2.0ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:29:53 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+Started GET "/cable" for ::1 at 2017-10-01 19:29:53 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:29:53 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+Started GET "/chat_rooms/2" for ::1 at 2017-10-01 19:30:06 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 2[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [2 times] (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of messages/_message.html.erb [2 times] (6.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 77ms (Views: 53.1ms | ActiveRecord: 1.7ms)
+
+
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/new" for ::1 at 2017-10-01 19:30:08 +0200
+Processing by ChatRoomsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/new.html.erb within layouts/application
+  Rendered chat_rooms/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 64ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/chat_rooms" for ::1 at 2017-10-01 19:30:22 +0200
+Processing by ChatRoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwGaW8kqFy+EjE+NnAuWLGRM6eGDhGYXuAy4l3ULBooAIs0Uh52vtqFZI5uvXRS3bkSSUSezAI19TW4724c+gQ==", "chat_room"=>{"title"=>"Warhammer 40K"}, "commit"=>"ADD NEW ROOM!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "chat_rooms" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Warhammer 40K"], ["user_id", 1], ["created_at", 2017-10-01 17:30:22 UTC], ["updated_at", 2017-10-01 17:30:22 UTC]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/chat_rooms
+Completed 302 Found in 18ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/chat_rooms" for ::1 at 2017-10-01 19:30:22 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [3 times] (1.2ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 60ms (Views: 53.4ms | ActiveRecord: 0.6ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:30:22 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/chat_rooms/3" for ::1 at 2017-10-01 19:30:25 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.4ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 3[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [3 times] (1.6ms)
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 70ms (Views: 47.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 19:30:25 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:30:25 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_3_channel
+Started GET "/chat_rooms/3" for ::1 at 2017-10-01 19:32:50 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 3[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [3 times] (1.6ms)
+  Rendered collection of templates [0 times] (0.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/Users/uptrail/dev/chat/media_chat/app/views/layouts/application.html.erb:38: syntax error, unexpected tLABEL
+...troy_user_session_path, method: :delete );@output_buffer.saf...
+...                               ^):
+  
+app/views/layouts/application.html.erb:38: syntax error, unexpected tLABEL
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.6ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (149.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_uptrail__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2396687839694232786_70341316766920 at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (123.2ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (276.7ms)
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:32:51 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_3_channel
+Started GET "/chat_rooms/3" for ::1 at 2017-10-01 19:33:02 +0200
+Processing by ChatRoomsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mChatRoom Load (0.2ms)[0m  [1m[34mSELECT  "chat_rooms".* FROM "chat_rooms" WHERE "chat_rooms"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_room_id" = 3[0m
+  Rendering chat_rooms/show.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [3 times] (2.0ms)
+  Rendered collection of templates [0 times] (0.1ms)
+  Rendered chat_rooms/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 56ms (Views: 45.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cable" for ::1 at 2017-10-01 19:33:02 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:33:02 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActionCable] [anton@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzE)
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_3_channel
+Started DELETE "/users/sign_out" for ::1 at 2017-10-01 19:33:20 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Kb9UVmGxFMLDJqR8YleFxp90C3eqw/5eya9qNr0/tpSWnAMZLwasW+bzyGpRAQddlXxwxw70mMQM7ryaE7OOnw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-10-01 19:33:20 +0200
+Processing by ChatRoomsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:33:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+[ActionCable] [anton@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-01 19:33:21 +0200
+[ActionCable] [anton@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_3_channel
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:34:01 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:34:54 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `rememberable_options' for #<Class:0x007ff33edf4448>):
+    34:     <aside class="aside aside-left">
+    35:       <%= yield :aside_left %>
+    36: 
+    37:       <% if current_user %>
+    38:         <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    39:       <% end %>
+    40:     </aside>
+  
+app/views/layouts/application.html.erb:37:in `_app_views_layouts_application_html_erb__4327542430085487374_70341310179680'
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (21.8ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (224.4ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_uptrail__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2396687839694232786_70341316011500 at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (124.9ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (277.8ms)
+Started GET "/cable" for ::1 at 2017-10-01 19:35:03 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:35:03 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:35:21 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `rememberable_options' for #<Class:0x007ff33edf4448>):
+    34:     <aside class="aside aside-left">
+    35:       <%= yield :aside_left %>
+    36: 
+    37:       <% if current_user %>
+    38:         <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    39:       <% end %>
+    40:     </aside>
+  
+app/views/layouts/application.html.erb:37:in `_app_views_layouts_application_html_erb__4327542430085487374_70341367625780'
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.8ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (162.5ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_uptrail__rbenv_versions_______lib_ruby_gems_______gems_web_console_______lib_web_console_templates_console_js_erb___2396687839694232786_70341372287380 at /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (137.1ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendering /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/uptrail/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (305.3ms)
+Started GET "/cable" for ::1 at 2017-10-01 19:35:39 +0200
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:35:39 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-01 19:35:39 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (105.6ms)
+Completed 200 OK in 792ms (Views: 745.0ms | ActiveRecord: 0.9ms)
+
+
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
+Started GET "/users/sign_up" for ::1 at 2017-10-01 19:35:43 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 60ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-10-01 19:36:14 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:36:20 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-10-01 19:36:21 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 145ms (Views: 141.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-10-01 19:42:45 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-10-01 19:42:54 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cN3/H5PVpJ97lh3jbAuMXpkoAL0TUzsXniR6AxJU/z6MSwhuK8oWM/YjwHOAT+DMXDf5Us5mh+jWuV17ZVVEZw==", "user"=>{"email"=>"anton@chatrooms.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "anton@chatrooms.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 214ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-10-01 19:42:55 +0200
+Processing by ChatRoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering chat_rooms/index.html.erb within layouts/application
+  [1m[36mChatRoom Load (0.3ms)[0m  [1m[34mSELECT "chat_rooms".* FROM "chat_rooms"[0m
+  Rendered collection of chat_rooms/_chat_room.html.erb [3 times] (1.8ms)
+  Rendered chat_rooms/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 94ms (Views: 75.0ms | ActiveRecord: 2.1ms)
+
+
+[ActionCable] [erik@chatrooms.com] Finished "/cable/" [WebSocket] for ::1 at 2017-10-02 17:46:08 +0200
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_1_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel stopped streaming from chat_rooms_2_channel
+Started GET "/cable" for ::1 at 2017-10-02 17:46:09 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2017-10-02 17:46:09 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActionCable] [erik@chatrooms.com] Registered connection (Z2lkOi8vbWVkaWEtY2hhdC9Vc2VyLzI)
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_1_channel
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is transmitting the subscription confirmation
+[ActionCable] [erik@chatrooms.com] ChatRoomsChannel is streaming from chat_rooms_2_channel
